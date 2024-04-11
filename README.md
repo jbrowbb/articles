@@ -6,6 +6,14 @@
     - Ned Fulmer getting removed from The Try Guys channel
     - Grand Theft Auto 6 is the most viewed YouTube trailer
 
+ ## article.txt p2
+ - filled with five more urls from Variety that are over anime
+   - Newflix and other streaming services are doubling down on anime
+   - Crunchyroll and Funnimation are merging, while Sony drops Funimation
+   - Attack on Kyoto Animation
+   - Netfilx Live Action One Piece aiming to capitalize
+   - Funimation ends anime licensing pact with Crunchyroll
+
 ## requirements.yml
 - Created a base in conda called article_reader with python version 3.10.11
 - Activated the environment
