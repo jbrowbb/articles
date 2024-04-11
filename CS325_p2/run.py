@@ -8,7 +8,7 @@ if __name__=="__main__":
     articles_file = "articles.txt"
 
     # Get URLs from the text file
-    urls - get_urls(articles_file)
+    urls = get_urls(articles_file)
 
     # Scrape articles from the URLs
     scrape_articles(urls)

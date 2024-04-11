@@ -14,7 +14,7 @@ def scrape_articles(urls):
     os.makedirs(output_dir, exist_ok=True)
 
     # Scrape and save data for each URL
-    for inx, url in enumerate(urls):
+    for idx, url in enumerate(urls):
         try:
             # Download webpafe content
             response = requests.get(url)
