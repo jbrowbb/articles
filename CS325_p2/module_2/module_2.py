@@ -22,12 +22,12 @@ def scrape_articles(urls):
             soup = BeautifulSoup(response.content, 'html.parser')
 
             # Extract article text
-            html_content = str(soup)
+            article_text = soup.get_text(strip=True)        # Gets all text
 
-            # Save HTML content to a file
-            article_file = output_dir / f'article_{idx + 1}.html'
+            # Save data to a text file in the processed directory
+            article_file = output_dir / f'article_{idx + 1}.txt'
             with article_file.open('w', encoding='utf-8') as f:
-                f.write(html_content)
+                f.write(article_text)
             print(f"Article {idx +1} scraped and saved")
 
         except Exception as e:
