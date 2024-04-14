@@ -1,16 +1,17 @@
+from pathlib import Path
 from module_1.module_1 import get_urls
 from module_2.module_2 import scrape_articles
 
-if __name__=="__main__":
-    """ Scrapes articles from text file and saces them to separate files."""
+if __name__ == "__main__":
+    """ Scrapes articles from text file and saves them to separate files. """
 
-    # replace with path if not correct (assumption it is in "Data/raw")
-    articles_file = "articles.txt"
+    # Path to article file with article urls, can change
+    articles_file = Path("Data/raw/articles.txt")
 
-    # Get URLs from the text file
+    # Get Urls from text file
     urls = get_urls(articles_file)
 
-    # Scrape articles from the URLs
+    # Scrapes articles from URLs
     scrape_articles(urls)
 
-    print(f"Articles scraped and saved into Data/processed")
+    print(f"Articles scraped and saved to Data/processed")
