@@ -1,5 +1,5 @@
-from module_1 import get_urls
-from module_2 import scrape_arctiles
+from module_1.module_1 import get_urls
+from module_2.module_2 import scrape_articles
 
 if __name__=="__main__":
     """ Scrapes articles from text file and saces them to separate files."""
