@@ -9,7 +9,7 @@ def scrape_articles(urls):
         urls: A lsit of URLs to scrape.
     """
 
-    output_dir = Path(__file__).resolve().parent.parent / 'processed'
+    output_dir = Path(__file__).resolve().parent.parent / 'Data'/'processed'
 
     # Scrape and save data for each URL
     for idx, url in enumerate(urls):
@@ -22,13 +22,13 @@ def scrape_articles(urls):
             soup = BeautifulSoup(response.content, 'html.parser')
 
             # Extract article text
-            article_text = soup.get_text(strip=True)        # Gets all text
+            html_content = str(soup)
 
-            # Save data to a text file in the processed directory
-            article_file = output_dir / f'article_{idx + 1}.txt'
+            # Save HTML content to a file
+            article_file = output_dir / f'article_{idx + 1}.html'
             with article_file.open('w', encoding='utf-8') as f:
-                f.write(article_text)
+                f.write(html_content)
             print(f"Article {idx +1} scraped and saved")
 
         except Exception as e:
-            print(f"Errpr scraping article {idx + 1}: {e}")
+            print(f"Error scraping article {idx + 1}: {e}")
