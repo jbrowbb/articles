@@ -10,7 +10,7 @@ def scrape_articles(urls):
     """
 
     # Create the output directory is it doesn't exist
-    output_dir = os.path.join("Data", "processed")
+    output_dir = os.path.join('Data', 'processed')
     os.makedirs(output_dir, exist_ok=True)
 
     # Scrape and save data for each URL
@@ -21,7 +21,7 @@ def scrape_articles(urls):
             response.raise_for_status()     # Raise exception for non-200 status codes
 
             # Parse the HTML content with BeautifulSoup
-            soup = BeautifulSoup(response.content, 'html.arser')
+            soup = BeautifulSoup(response.content, 'html.parser')
 
             # Extracts article text (modify logic as needed)
             article_text = soup.get_text(strip=True)        # Get all test (adjust selector if needed)

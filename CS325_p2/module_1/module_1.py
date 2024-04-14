@@ -11,7 +11,7 @@ def get_urls(articles_file):
     """
 
     # Costruct abolte path based on expected filder structure
-    articles_file = os.path.join("Data", "raw", articles_file)
+    articles_file = os.path.join('Data', 'raw', articles_file)
 
     # Reads URLs from the file
     with open(articles_file, 'r') as file:
