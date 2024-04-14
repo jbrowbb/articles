@@ -9,9 +9,7 @@ def scrape_articles(urls):
         urls: A lsit of URLs to scrape.
     """
 
-    # Create the oput directoy if it doen't exist (use pathlib)
-    output_dir = Path("Data/processed")
-    output_dir.mkdir(parents=True, exist_ok=True)
+    output_dir = Path(__file__).resolve().parent.parent / 'processed'
 
     # Scrape and save data for each URL
     for idx, url in enumerate(urls):
